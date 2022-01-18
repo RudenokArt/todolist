@@ -1,5 +1,5 @@
 <template>
-  <LoginForm msg="Login"/>
+  <EnterPage msg="Enter"/>
   <hr>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -7,12 +7,12 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
-import LoginForm from './components/LoginForm.vue';
+import EnterPage from './components/EnterPage.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld, LoginForm,
+    HelloWorld, EnterPage,
   }
 }
 </script>
