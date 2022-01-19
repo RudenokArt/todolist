@@ -1,5 +1,4 @@
 <template>
-	<h2>{{ msg }}</h2>
 	
 	<div class="container">
 		<div class="row">
@@ -15,10 +14,9 @@
 							</a>
 						</div>
 					</nav>
-					<div class="tab-content">
+					<div class="tab-content p-1">
 						<div v-for="(item, index) in arrTab" v-bind:key="index"
 						v-bind:class="setClass(index)" >
-						{{item}}
 						<LoginForm v-if="currentTab==0" v-bind:getCurrentTabName="getCurrentTabName"/>
 						<SigninForm v-if="currentTab==1" v-bind:getCurrentTabName="getCurrentTabName"/>
 					</div>
@@ -57,7 +55,6 @@
 			},
 			swichTab: function (index) {
 				this.currentTab = index;
-				console.log(this.arrTab[index]);
 			}
 		},
 		computed: {

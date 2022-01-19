@@ -6,24 +6,28 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-import EnterPage from './components/EnterPage.vue';
+  import HelloWorld from './components/HelloWorld.vue';
+  import EnterPage from './components/EnterPage.vue';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld, EnterPage,
+  export default {
+    name: 'App',
+    components: {
+      HelloWorld, EnterPage,
+    }
   }
-}
 </script>
 
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .btn-outline-info:hover {
+    color: white;
+  }
+  
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 </style>
