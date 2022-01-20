@@ -1,5 +1,5 @@
 <template>
-  <EnterPage msg="Enter"/>
+  <EnterPage msg="title"/>
   <hr>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -13,8 +13,8 @@
     name: 'App',
     components: {
       HelloWorld, EnterPage,
-    }
-  }
+    },
+  };
 </script>
 
 <style lang="less">

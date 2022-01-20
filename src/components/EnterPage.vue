@@ -17,7 +17,9 @@
 					<div class="tab-content p-1">
 						<div v-for="(item, index) in arrTab" v-bind:key="index"
 						v-bind:class="setClass(index)" >
-						<LoginForm v-if="currentTab==0" v-bind:getCurrentTabName="getCurrentTabName"/>
+						<LoginForm v-if="currentTab==0" v-bind:getCurrentTabName="getCurrentTabName"
+						v-on:newTitle="newTitle" 
+						v-bind:title="title"/>
 						<SigninForm v-if="currentTab==1" v-bind:getCurrentTabName="getCurrentTabName"/>
 					</div>
 				</div>
@@ -42,7 +44,8 @@
 		data: function () {
 			return {
 				currentTab:0,
-				arrTab: ['Log in', 'Sign in']
+				arrTab: ['Log in', 'Sign in'],
+				title: 'login', 
 			};
 		},
 		methods: {
@@ -53,6 +56,9 @@
 				}
 				return currentClass;
 			},
+			newTitle: function (val) {
+        this.title = val;
+      },
 			swichTab: function (index) {
 				this.currentTab = index;
 			}
